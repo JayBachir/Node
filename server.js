@@ -1,6 +1,7 @@
 const express = require ('express');
 const handle  = require ('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 var app = express();
 // add partials feature
@@ -59,6 +60,6 @@ app.get('/bad', (req, resp)=>{
 });
 
 
-app.listen(3000 , () =>{
-  console.log('server up and running on port 3000');
+app.listen(port , () =>{
+  console.log(`server up and running on port ${port}`);
 });
